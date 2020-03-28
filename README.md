@@ -81,7 +81,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 1. clone
 2. copy .env.example to .env
 3. config your database connection
-4. composer install
-6. npm install
-7. php artisan key:generate
-8. php artisan serve
+5. php artisan migrate
+6. composer install
+7. npm install
+8. php artisan key:generate
+9. php artisan serve
