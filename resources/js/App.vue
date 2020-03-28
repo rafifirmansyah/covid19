@@ -86,7 +86,7 @@
                         </b-card>                           
                     </div>
                 </div>
-                <div class="col text-center">Sumber data : Kementerian Kesehatan & JHU. Update terakhir : {{ highlight.last_update | moment("dddd, D MMMM YYYY HH:mm:ss") }} WIB</div>
+                <div class="col text-center">Sumber data : <a href="https://mathdro.id/">Mathdro.id</a>. Update terakhir : {{ highlight.last_update | moment("dddd, D MMMM YYYY HH:mm:ss") }} WIB</div>
 
                 <!-- END HIGHLIGHT -->
 
@@ -233,7 +233,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xl-16">
                         <b-card header-tag="header" footer-tag="footer">
                             <template v-slot:header>
-                                <h5 class="mb-0">Kasus Coronavirus Global (Data by JHU)</h5>
+                                <h5 class="mb-0">Kasus Coronavirus Global</h5>
                             </template>
                             <b-card-text>
 
@@ -454,9 +454,9 @@ export default {
                     this.provinsi.items.push({
                         no:  no,
                         provinsi: cases.provinsi,
-                        positif: cases.kasusPosi,
-                        sembuh: cases.kasusSemb,
-                        meninggal: cases.kasusMeni
+                        positif: this.priceFormat(cases.kasusPosi),
+                        sembuh: this.priceFormat(cases.kasusSemb),
+                        meninggal: this.priceFormat(cases.kasusMeni)
 
                     });
 
@@ -500,9 +500,9 @@ export default {
                         no: no,
                         country: cases.countryRegion,
                         province: cases.provinceState,
-                        positive: cases.confirmed,
-                        recovered: cases.recovered,
-                        deaths: cases.deaths,
+                        positive: this.priceFormat(cases.confirmed),
+                        recovered: this.priceFormat(cases.recovered),
+                        deaths: this.priceFormat(cases.deaths),
                         last_update: cases.lastUpdate
                     });
 
