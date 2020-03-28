@@ -5,7 +5,7 @@
                 <div class="jumbotron">
                     <div class="container">
                         <h1 class="text-center mb-1">COVID-19</h1>
-                        <h6 class="text-center">Coronavirus Disease 2019 Global & Indonesia Live Data</h6>
+                        <h6 class="text-center">Laporan Pandemi COVID-19 Global & Indonesia Terupdate</h6>
                     </div>
                 </div>
             </header>

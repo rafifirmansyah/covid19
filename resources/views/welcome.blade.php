@@ -3,8 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Laporan Pandemi COVID-19 Global & Indonesia Terupdate.">
 
-        <title>Covid-19 Report - Rafi Firmansyah</title>
+        <title>COVID-19 Report - Rafi Firmansyah</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
