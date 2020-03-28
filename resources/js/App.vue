@@ -86,7 +86,7 @@
                         </b-card>                           
                     </div>
                 </div>
-                <div class="col text-center">Sumber data : <a href="https://mathdro.id/">Mathdro.id</a>. Update terakhir : {{ highlight.last_update | moment("dddd, D MMMM YYYY HH:mm:ss") }} WIB</div>
+                <div class="col text-center">Sumber data : <a href="https://mathdro.id/" target="_blank">Mathdro.id</a>. Update terakhir : {{ highlight.last_update | moment("dddd, D MMMM YYYY HH:mm:ss") }} WIB</div>
 
                 <!-- END HIGHLIGHT -->
 
