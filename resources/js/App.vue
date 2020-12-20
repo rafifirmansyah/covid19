@@ -189,7 +189,7 @@
                 <!-- END TABLE KASUS BERDASARKAN PROVINSI -->
                 
                 <!-- TABLE KASUS CORONAVIRUS DI INDONESIA -->
-                <div class="row row-custom">
+                <!-- <div class="row row-custom">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xl-16">
                         <b-card header-tag="header" footer-tag="footer">
                             <template v-slot:header>
@@ -225,7 +225,7 @@
                             </b-card-text>
                         </b-card>
                     </div>
-                </div>
+                </div> -->
                 <!-- END TABLE CORONAVIRUS DI INDONESIA -->
 
                 <!-- KASUS CORONAVIRUS GLOBAL -->
@@ -300,7 +300,7 @@ export default {
         this.getGlobal();
         this.getIndonesianCase();
         this.getTotalCaseProvinsi();
-        this.getAllCaseIndonesian();
+        // this.getAllCaseIndonesian();
         this.getAllCountryDetails();
     },
     
@@ -451,14 +451,16 @@ export default {
                 let no = 1
 
                 totalCaseProvinsi.data.data.forEach(cases => {
-                    this.provinsi.items.push({
-                        no:  no,
-                        provinsi: cases.provinsi,
-                        positif: this.priceFormat(cases.kasusPosi),
-                        sembuh: this.priceFormat(cases.kasusSemb),
-                        meninggal: this.priceFormat(cases.kasusMeni)
-
-                    });
+                    if (cases.provinsi != "Indonesia") {
+                        this.provinsi.items.push({
+                            no:  no,
+                            provinsi: cases.provinsi,
+                            positif: this.priceFormat(cases.kasusPosi),
+                            sembuh: this.priceFormat(cases.kasusSemb),
+                            meninggal: this.priceFormat(cases.kasusMeni)
+    
+                        });
+                    }
 
                     no++;
                 });
